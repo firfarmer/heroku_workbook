@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/css	/style.css">
+<table> 
+ 	<tr>
+  		<th>Case Number</th>
+  		<th>Subject</th>
+	</tr>
+	<% @cases.each do |_case| %>
+	<tr> 
+		<td><%= _case.CaseNumber %></td>
+		<td><%= _case.Subject %></td>
+	</tr>
+	<% end %>
+</table>

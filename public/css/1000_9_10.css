@@ -1,0 +1,217 @@
+/*
+1000px grid system ~ Core CSS.
+9 columns ~ margin: 10px
+
+Based on the golden grid system - http://code.google.com/p/the-golden-grid/
+by Vladimir Carrer
+
+Created by the Grid System Generator - v1.00
+Learn more ~ http://www.gridsystemgenerator.com/
+*/
+
+/* =Containers
+--------------------------------------------------------------------------------*/
+.main
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+
+/* =Grid >> Global
+--------------------------------------------------------------------------------*/
+.g110, .g220, .g330, .g440, .g550, .g660, .g770, .g880, .g990 {
+	display: inline;
+	float: left;
+	margin-left: 10px;
+}
+
+/* =Grid >> 9 Columns
+--------------------------------------------------------------------------------*/
+.g110{width:100px;}
+.g220{width:210px;}
+.g330{width:320px;}
+.g440{width:430px;}
+.g550{width:540px;}
+.g660{width:650px;}
+.g770{width:760px;}
+.g880{width:870px;}
+.g990{width:980px;}
+
+
+/* =Grid >> 9 Columns - no left margin
+--------------------------------------------------------------------------------*/
+.ml110{margin-left:120px;}
+.ml220{margin-left:230px;}
+.ml330{margin-left:340px;}
+.ml440{margin-left:450px;}
+.ml550{margin-left:560px;}
+.ml660{margin-left:670px;}
+.ml770{margin-left:780px;}
+.ml880{margin-left:890px;}
+.ml990{margin-left:1000px;}
+
+
+.inside{margin-left:0;}
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+	clear: both;
+	content:' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+/*float*/
+.fl,  .fr { display: inline } 
+.fl { float:left } 
+.fr { float:right }
+/* display*/
+.hide { display:none}
+.block { display:block}
+.inline { display:inline }
+.inlineb { display: inline-block }
+/* width*/ 
+.w1 { width: 1px } .w2 { width: 2px } .w3 { width: 3px } .w4 { width: 4px } .w5 { width: 5px } .w6 { width: 6px } .w7 { width: 7px } .w8 { width: 8px } 
+.w9 { width: 9px } .w10 { width: 10px } .w11 { width: 11px } .w12 { width: 12px } .w13 { width: 13px } .w14 { width: 14px } .w15 { width: 15px } 
+.w16 { width: 16px } .w17 { width: 17px } .w18 { width: 18px } .w19 { width: 19px } .w20 { width: 20px } .w21 { width: 21px } .w22 { width: 22px } 
+.w23 { width: 23px } .w24 { width: 24px } .w25 { width: 25px } .w26 { width: 26px } .w27 { width: 27px } .w28 { width: 28px } .w29 { width: 29px } 
+.w30 { width: 30px } .w35 { width: 35px } .w40 { width: 40px } .w45 { width: 45px } .w50 { width: 50px } .w55 { width: 55px } .w60 { width: 60px } 
+.w65 { width: 65px } .w70 { width: 70px } .w75 { width: 75px } .w80 { width: 80px } .w85 { width: 85px } .w88 { width: 88px } .w90 { width: 90px } 
+.w95 { width: 95px } .w100 { width: 100px } .w105 { width: 105px } 
+.w110 { width: 110px } .w115 { width: 115px } .w120 { width: 120px } .w125 { width: 125px } .w130 { width: 130px } 
+.w135 { width: 135px } .w140 { width: 140px } .w145 { width: 145px } .w150 { width: 150px } .w155 { width: 155px } 
+.w160 { width: 160px } .w165 { width: 165px } .w170 { width: 170px } .w175 { width: 175px } .w180 { width: 180px } 
+.w185 { width: 185px } .w190 { width: 190px } .w195 { width: 195px } .w200 { width: 200px } .w225 { width: 225px } 
+.w234 { width: 234px } .w250 { width: 250px } .w275 { width: 275px } .w300 { width: 300px } .w325 { width: 325px } 
+.w336 { width: 336px } .w350 { width: 350px } .w375 { width: 375px } .w392 { width: 392px } .w400 { width: 400px } 
+.w425 { width: 425px } .w450 { width: 450px } .w468 { width: 468px } .w475 { width: 475px } .w500 { width: 500px } 
+.w525 { width: 525px } .w550 { width: 550px } .w575 { width: 575px } .w600 { width: 600px }  .w610 { width: 610px }.w720 { width: 720px } 
+.w728 { width: 728px } .w750 { width: 750px } .w760 { width: 760px } .w770 { width: 770px } .w780 { width: 780px }
+.w790 { width: 790px } .w800 { width: 800px } .w810 { width: 810px } .w820 { width: 820px } .w830 { width: 830px }
+.w840 { width: 840px } .w850 { width: 850px } .w860 { width: 860px } .w870 { width: 870px } .w880 { width: 880px }
+.w890 { width: 890px } .w900 { width: 900px } .w910 { width: 910px } .w920 { width: 920px } .w930 { width: 930px }
+.w940 { width: 940px } .w950 { width: 950px } .w960 { width: 960px } .w970 { width: 970px } .w980 { width: 980px } 
+.w1215 { width: 1215px } /*Covers 76% of all displays outthere which are >= 1280 */
+
+/* height */
+.h1 { height: 1px } .h2 { height: 2px } .h3 { height: 3px } .h4 { height: 4px } .h5 { height: 5px } 
+.h6 { height: 6px } .h7 { height: 7px } .h8 { height: 8px } .h9 { height: 9px } .h10 { height: 10px }
+.h11 { height: 11px } .h12 { height: 12px } .h13 { height: 13px } .h14 { height: 14px } .h15 { height: 15px } 
+.h16 { height: 16px } .h17 { height: 17px } .h18 { height: 18px } .h19 { height: 19px } .h20 { height: 20px } 
+.h21 { height: 21px } .h22 { height: 22px } .h23 { height: 23px } .h24 { height: 24px } .h25 { height: 25px } 
+.h26 { height: 26px } .h27 { height: 27px } .h28 { height: 28px } .h29 { height: 29px } .h30 { height: 30px } 
+.h31 { height: 31px } .h35 { height: 35px } .h40 { height: 40px } .h45 { height: 45px } .h50 { height: 50px } 
+.h55 { height: 55px } .h60 { height: 60px } .h65 { height: 65px } .h70 { height: 70px } .h72 { height: 72px } 
+.h75 { height: 75px } .h80 { height: 80px } .h85 { height: 85px } .h90 { height: 90px } .h95 { height: 95px } .h100 { height: 100px } 
+.h105 { height: 105px } .h110 { height: 110px } .h115 { height: 115px } .h120 { height: 120px } .h125 { height: 125px } .h130 { height: 130px } 
+.h105 { height: 105px } .h110 { height: 110px } .h115 { height: 115px } .h120 { height: 120px } .h125 { height: 125px } .h130 { height: 130px } 
+.h135 { height: 135px } .h140 { height: 140px } .h145 { height: 145px } .h150 { height: 150px } .h155 { height: 155px } .h160 { height: 160px } 
+.h165 { height: 165px } .h170 { height: 170px } .h175 { height: 175px } .h180 { height: 180px } .h185 { height: 185px } .h190 { height: 190px } 
+.h195 { height: 195px } .h200 { height: 200px } .h205 { height: 205px } .h210 { height: 210px } .h215 { height: 215px } .h220 { height: 220px } 
+.h225 { height: 225px } .h230 { height: 230px } .h235 { height: 235px } .h240 { height: 240px } .h245 { height: 245px } .h250 { height: 250px } 
+.h260 { height: 260px } .h270 { height: 270px } .h280 { height: 280px } .h290 { height: 290px } .h300 { height: 300px }
+.h310 { height: 310px } .h320 { height: 320px } .h330 { height: 330px } .h340 { height: 340px } .h350 { height: 350px }
+.h360 { height: 360px } .h370 { height: 370px } .h380 { height: 380px } .h390 { height: 390px } .h400 { height: 400px }
+.h410 { height: 410px } .h420 { height: 420px } .h430 { height: 430px } .h440 { height: 440px } .h450 { height: 450px }
+.h460 { height: 460px } .h470 { height: 470px } .h480 { height: 480px } .h490 { height: 490px } .h500 { height: 400px }
+.h510 { height: 510px } .h520 { height: 520px } .h530 { height: 530px } .h540 { height: 540px } .h550 { height: 550px }
+.h560 { height: 360px } .h570 { height: 570px } .h580 { height: 580px } .h590 { height: 590px } .h600 { height: 600px }
+ 
+ 
+/*MARGINS AND PADDING*/
+/*margin*/
+.m0 { margin: 0px }  .m1 { margin: 1px }  .m2 { margin: 2px }  .m3 { margin: 3px } 
+.m4 { margin: 4px }  .m5 { margin: 5px }  .m6 { margin: 6px }  .m7 { margin: 7px } 
+.m8 { margin: 8px }  .m9 { margin: 9px }  .m10 { margin: 10px }   .m15 { margin: 15px }   
+.m20 { margin: 20px }  .m25 { margin: 25px }  .m30 { margin: 30px }  .m35 { margin: 35px } 
+.m40 { margin: 40px }  .m45 { margin: 45px }  .m50 { margin: 50px } 
+/*margin-top*/
+.mt0 { margin-top: 0px }  .mt1 { margin-top: 1px }    .mt2 { margin-top: 2px }  .mt3 { margin-top: 3px } 
+.mt4 { margin-top: 4px }  .mt5 { margin-top: 5px }  .mt6 { margin-top: 6px }  .mt7 { margin-top: 7px } 
+.mt8 { margin-top: 8px }  .mt9 { margin-top: 9px }  .mt10 { margin-top: 10px }   .mt15 { margin-top: 15px }  
+.mt20 { margin-top: 20px }  .mt25 { margin-top: 25px }   .mt30 { margin-top: 30px }  .mt35 { margin-top: 35px }  
+.mt40 { margin-top: 40px }  .mt45 { margin-top: 45px }  .mt50 { margin-top: 50px } 
+/*margin-right*/
+.mr0 { margin-right: 0px }  .mr1 { margin-right: 1px }  .mr1 { margin-right: 1px }  .mr2 { margin-right: 2px } 
+.mr3 { margin-right: 3px }  .mr4 { margin-right: 4px }  .mr5 { margin-right: 5px }  .mr6 { margin-right: 6px } 
+.mr7 { margin-right: 7px }  .mr8 { margin-right: 8px }  .mr9 { margin-right: 9px }  .mr10 { margin-right: 10px } 
+.mr15 { margin-right: 15px }  .mr20 { margin-right: 20px }  .mr25 { margin-right: 25px }  .mr30 { margin-right: 30px } 
+.mr35 { margin-right: 35px }  .mr40 { margin-right: 40px }  .mr45 { margin-right: 45px }  .mr50 { margin-right: 50px } 
+/*margin-left*/
+.ml0 { margin-left: 0px }  .ml1 { margin-left: 1px }  .ml2 { margin-left: 2px }  .ml3 { margin-left: 3px } 
+.ml4 { margin-left: 4px }  .ml5 { margin-left: 5px }  .ml6 { margin-left: 6px }  .ml7 { margin-left: 7px } 
+.ml8 { margin-left: 8px }  .ml9 { margin-left: 9px }  .ml10 { margin-left: 10px }  .ml15 { margin-left: 15px } 
+.ml20 { margin-left: 20px }  .ml25 { margin-left: 25px }  .ml30 { margin-left: 30px }  .ml35 { margin-left: 35px }
+.ml40 { margin-left: 40px }  .ml45 { margin-left: 45px }  .ml50 { margin-left: 50px }  
+/*margin-bottom*/
+.mb0 { margin-bottom: 0px }  .mb1 { margin-bottom: 1px }   .mb2 { margin-bottom: 2px }  .mb3 { margin-bottom: 3px } 
+.mb4 { margin-bottom: 4px }  .mb5 { margin-bottom: 5px }  .mb6 { margin-bottom: 6px }  .mb7 { margin-bottom: 7px } 
+.mb8 { margin-bottom: 8px }  .mb9 { margin-bottom: 9px }  .mb10 { margin-bottom: 10px }  .mb15 { margin-bottom: 15px } 
+.mb20 { margin-bottom: 20px }  .mb25 { margin-bottom: 25px }  .mb30 { margin-bottom: 30px }  .mb35 { margin-bottom: 35px }
+.mb40 { margin-bottom: 40px }  .mb45 { margin-bottom: 45px }  .mb50 { margin-bottom: 50px } 
+/*padding*/
+.p0 { padding: 0px }  .p1 { padding: 1px }  .p2 { padding: 2px }  .p3 { padding: 3px }  .p4 { padding: 4px } 
+.p5 { padding: 5px }  .p6 { padding: 6px }  .p7 { padding: 7px }  .p8 { padding: 8px }  .p9 { padding: 9px } 
+.p10 { padding: 10px }  .p15 { padding: 15px } .p20 { padding: 20px } .p25 { padding: 25px } .p30 { padding: 30px }
+.p35 { padding: 35px } .p40 { padding: 40px } .p45 { padding: 45px } .p50 { padding: 50px }
+/*padding-top*/
+.pt0 { padding-top: 0px }  .pt1 { padding-top: 1px }  .pt2 { padding-top: 2px }  .pt3 { padding-top: 3px } 
+.pt4 { padding-top: 4px }  .pt5 { padding-top: 5px }  .pt6 { padding-top: 6px }  .pt7 { padding-top: 7px } 
+.pt8 { padding-top: 8px }  .pt9 { padding-top: 9px }  .pt10 { padding-top: 10px }  .pt15 { padding-top: 15px }  
+.pt20 { padding-top: 20px } .pt25 { padding-top: 25px } .pt30 { padding-top: 30px } .pt35 { padding-top: 35px } 
+.pt40 { padding-top: 40px } .pt45 { padding-top: 45px } .pt50 { padding-top: 50px }
+/*padding-right*/
+.pr0 { padding-right: 0px }  .pr1 { padding-right: 1px }   .pr2 { padding-right: 2px }  .pr3 { padding-right: 3px } 
+.pr4 { padding-right: 4px }  .pr5 { padding-right: 5px }  .pr6 { padding-right: 6px }  .pr7 { padding-right: 7px } 
+.pr8 { padding-right: 8px }  .pr9 { padding-right: 9px }  .pr10 { padding-right: 10px }   .pr15 { padding-right: 15px } 
+.pr20 { padding-right: 20px } .pr25 { padding-right: 25px } .pr30 { padding-right: 30px } .pr35 { padding-right: 35px }
+.pr40 { padding-right: 40px } .pr45 { padding-right: 45px } .pr50 { padding-right: 50px }
+/*padding-bottom*/
+.pb0 { padding-bottom: 0px }  .pb1 { padding-bottom: 1px }   .pb2 { padding-bottom: 2px }   .pb3 { padding-bottom: 3px } 
+.pb4 { padding-bottom: 4px }  .pb5 { padding-bottom: 5px }  .pb6 { padding-bottom: 6px }   .pb7 { padding-bottom: 7px }  
+.pb8 { padding-bottom: 8px }   .pb9 { padding-bottom: 9px }  .pb10 { padding-bottom: 10px }   .pb15 { padding-bottom: 15px }  
+.pb20 { padding-bottom: 20px } .pb25 { padding-bottom: 25px } .pb30 { padding-bottom: 30px } .pb35 { padding-bottom: 35px }
+.pb40 { padding-bottom: 40px } .pb45 { padding-bottom: 45px } .pb50 { padding-bottom: 50px }
+/*padding-left*/
+.pl0 { padding-left: 0px }  .pl1 { padding-left: 1px }   .pl2 { padding-left: 2px }  .pl3 { padding-left: 3px } 
+.pl4 { padding-left: 4px }  .pl5 { padding-left: 5px }  .pl6 { padding-left: 6px }  .pl7 { padding-left: 7px } 
+.pl8 { padding-left: 8px }  .pl9 { padding-left: 9px }  .pl10 { padding-left: 10px }  .pl15 { padding-left: 15px } 
+.pl20 { padding-left: 20px } .pl25 { padding-left: 25px } .pl30 { padding-left: 30px } .pl35 { padding-left: 35px }
+.pl40 { padding-left: 40px } .pl45 { padding-left: 45px } .pl50 { padding-left: 50px }

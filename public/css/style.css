@@ -1,0 +1,11 @@
+body {
+    font-family: tahoma;
+}
+th, td {
+	text-align: left;
+	padding: 0 20 0 20;
+}
+h1 {
+    color: navy;
+    margin-left: 20px;
+}

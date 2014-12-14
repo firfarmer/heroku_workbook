@@ -1,0 +1,20 @@
+<apex:page showheader="false" standardStyleSheets="false">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Concur Support</title>
+		
+		<link href="{!URLFOR($Resource.supportsitecss, 'css/main.css')}" rel="stylesheet" type="text/css" />
+		<link href="{!URLFOR($Resource.supportsitecss, 'css/1000_9_10.css')}" rel="stylesheet" type="text/css" />
+		<link href="{!URLFOR($Resource.supportsitecss, 'css/reset.css')}" rel="stylesheet" type="text/css" />
+		<link href="{!URLFOR($Resource.supportsitecss, 'css/text.css')}" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="main">	
+			<c:SupportSiteHeader />
+		</div>
+	</body>
+
+</html>
+</apex:page>

@@ -1,0 +1,28 @@
+
+		<script>
+		    
+		//  To display proper URL for proxy login as user
+		//  ----------------------------------------------------------------    
+		    function targetFooterFrame(){  
+
+		            frameSrc = '/SupportSitePortalFooter';
+		            if(location.pathname.indexOf('/CgeSupport/') != -1){
+		                frameSrc = '/CgeSupport'+frameSrc;
+		            } else if(location.pathname.indexOf('/CteSupport/')  != -1){
+		                frameSrc = '/CteSupport'+frameSrc;
+		            } else if(location.pathname.indexOf('/CsbSupport/')  != -1){
+		                frameSrc = '/CsbSupport'+frameSrc;
+		            } else if(location.pathname.indexOf('/CteStandard/')  != -1){
+		                frameSrc = '/CteStandard'+frameSrc;
+		            } else {
+		                frameSrc = '/apex'+frameSrc;
+		            }
+		            document.getElementById('footerFrame').src = frameSrc;  
+
+		    }
+
+		</script>		
+
+
+	<iframe scrolling="no" height="170px" width="100%" id="footerFrame"></iframe>
+    <script> if(document.getElementById('footerFrame').src == '')targetFooterFrame();</script>

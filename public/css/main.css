@@ -1,0 +1,372 @@
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+			border: none;
+		}
+		/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+		a:link {
+			color: #42413C;
+			text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+		}
+		a:visited {
+			color: #42413C;
+			text-decoration: underline;
+		}
+		a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+			text-decoration: none; !important;
+		}
+		
+		
+		/* ~~ the header */
+		.header {
+			background-color: #2F2F37;
+			height: 100px;
+			padding-left: 15px;
+			padding-right: 15px;
+			display: block;
+		}
+		
+		.Logo {
+			float: left;
+			margin-top: 15px;
+		}
+		
+		.Profile {
+			height: 75px;
+			float: right;
+			margin-top: 10px;
+		}
+				
+		
+		/* ~~ The navbar ~~ */
+		.TopNav {
+			
+			background-color: #2F2F37;
+			height: 52px;
+			padding-left: 47px;
+			margin-top: 0px;
+			overflow: visible;
+			clear: both;
+		}
+		
+		.TopNav li{
+			background-color: #2F2F37;
+			border-top: 1px solid #2F2F37;	
+			border-bottom: 1px solid #2F2F37;
+		 	float: left;
+			list-style: none;
+			overflow: visible;
+			margin-left: 0px;
+		}
+		
+		.TopNav li a:link, a:visited{
+			background-color: #2F2F37;
+			border-top: 1px solid #2F2F37;
+			color: #FFF;
+			text-decoration: none;
+		 	display: block;
+			height: 33px;
+			padding-top: 15px;
+			padding-left: 30px;
+			padding-right: 30px;
+			overflow: visible;
+		}
+		
+		.TopNav li a:hover{
+			background-color: #EBB142;	
+			display: block;
+			border-top: 1px solid #F5D98E;
+			height: 34px;
+			padding-top: 15px;
+			padding-left: 30px;
+			padding-right: 30px;
+			overflow: visible;
+		}
+		
+		.TopNav li.active a:after,
+		.TopNav li a:hover:after {
+			content: "";
+			display: block;
+			margin: 15px auto; 
+			width: 0;
+			border: 8px solid red;
+			border-color: #EBB142 transparent transparent transparent;
+		}
+		
+		.TopNav li a.ActiveMenu {
+			background-color: #1c92cb;;	
+			display: block;
+			border-top: 1px solid #1c92cb;
+			height: 34px;
+			padding-top: 15px;
+			padding-left: 30px;
+			padding-right: 30px;
+			overflow: visible;
+		}
+		
+		.TopNav li.ActiveItem a:after {
+			content: "";
+			display: block;
+			margin: 15px auto; 
+			width: 0;
+			border: 8px solid red;
+			border-color: #1c92cb transparent transparent transparent;
+		}
+		
+		/* ~~ This is the layout information. ~~ 
+		
+		1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+		
+		*/
+		
+		.main {
+			margin: 0;
+			padding: 0;
+		}
+		.content {
+			
+			padding: 10px 0 0 0;
+		}
+		
+		
+		
+		/* ~~ The search widget ~~ */
+		.SearchBox {
+			background-color: #F1F2F3;	
+			height: 60px;
+			margin-top: 15px;
+			color: #303038;
+			display: block;
+			line-height: 60px;
+		}
+		
+		.SearchBtn {
+			line-height: 30px;
+			width: 80px;
+			height: 30px;
+			background: #EBB142;
+			border: none;
+			-moz-border-radius: 3px; 
+			border-radius: 3px;
+			vertical-align: middle;
+		}
+		            
+		.SearchBtn:hover { 
+			background: #af8d31;
+		}
+		
+		
+		
+		/* ~~ The right column chat with support widget ~~ */
+		.ChatBox a{
+			background-color: #F1F2F3;	
+			height: 60px;
+			margin-top: 15px;
+			color: #303038;
+			display: block;
+			line-height: 60px;
+			text-decoration: none;
+			font-size: 19px;
+			font-weight: lighter;
+		}
+		
+		.ChatLogo{
+			Margin: 10px 15px 10px 18px;	
+		}
+		
+		
+		
+		/* ~~ The right column community section ~~ */
+		.CommunityBox a{	
+			height: 380px;
+			width: 272px;
+			margin-top: 40px;
+			color: #303038;
+			padding: 0 8px 15px 0;
+		}
+		
+		.Sidebar_Headline{
+			font-size: 19px;
+			font-weight: lighter;
+			width: 280px;
+		}
+		
+		.SideTile a{
+			text-decoration: none;
+		}
+		
+		
+		
+		
+		/* ~~ Main page tiles ~~ */
+		.SmTile{
+			border: 1px solid #ccc;
+			display:inline-block;
+			height: 150px;	
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+		}
+		
+		.SmTile a:link{
+			color: #303038;
+			text-decoration: none;
+		}
+		
+		.NewSmTile {
+			display:inline-block;
+			height: 150px;	
+			text-align: center;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+		}
+		
+		.NewSmTile a:link{
+			display: block;
+			text-decoration: none;
+			text-align: center;
+		}
+		
+		.styled-select select {
+		    width: 480px;
+		    padding: 5px;
+		    border: 1px solid #999;
+		    height: 28px;
+			-moz-border-radius: 3px; border-radius: 3px;
+		   }
+		
+		input{
+			height: 28px;
+			border: 1px solid #999;
+			-moz-border-radius: 3px; border-radius: 3px;
+		}
+		
+		textarea{
+			height: 140px;
+			border: 1px solid #999;
+			-moz-border-radius: 3px; border-radius: 3px;
+		}
+		
+		.CommitBtn {
+		    padding: 2px 6px 3px 6px; 
+			background: #EBB142;
+		    color: #ffffff;
+			border: none;
+			width: 80px;
+			height: 30px;
+			margin-top: 20px;
+			-moz-border-radius: 3px; border-radius: 3px;
+		}
+		            
+		.CommitBtn:hover { 
+			background: #af8d31;
+		    
+		}
+		
+				
+		/* ~~ The footer ~~ */
+		.footer {
+			padding: 10px 0;
+			background-color: #2F2F37;
+			color: #FFFFFF; 
+			height: 150px;
+			margin-bottom: 0px;
+			padding-bottom: 30px;
+			clear: both;
+		}
+		
+		.footer li{
+			text-decoration: none; !important;
+			list-style: none; !important;
+			margin-left: 0px; !important;
+		}
+		
+		.footer a{
+			text-decoration: none; !important;
+			font-weight: lighter; !important;
+			color: #FFFFFF; !important;
+			cursor: pointer; !important;
+		}
+		
+		.footer li a:link {
+			text-decoration: none; !important;
+			font-weight: lighter; !important;
+			color: #FFFFFF; !important;
+		}
+		
+		.footer li a:visited {
+			text-decoration: none; !important;
+			font-weight: lighter; !important;
+			color: #FFFFFF; !important;
+		}
+		
+		.SubNav {
+			float: left;
+			border-bottom: 1px solid #999;
+			height: 39px;
+			width: 980px;
+			clear: right;
+			display: block;
+			margin-bottom: 30px;
+			/*padding-left: 20px;*/
+			padding-left: 5px;
+			color: #303038;
+		}
+		
+		.SubNav ul{
+			margin-left: 0px;
+			margin-top: 0px;
+		}
+		
+		.SubNav ul li{
+		 	float: left;
+			list-style: none;
+			margin-left: 0px;
+		}
+		
+		.SubNav ul li a{
+			 height: 39px;
+			 padding-top: 0px;
+			 /*
+			 padding-left: 22px;
+			 padding-right: 22px;*/
+			 padding-left: 15px;
+			 padding-right: 15px;
+			 display: inline-block;
+			 color: #303038 !important;
+		}
+		
+		.SubNav ul li a:link, a:visited{
+			color: #303038 !important;
+			text-decoration: none;
+			display:block;
+		    text-align:center;
+			padding-top: 10px;
+			/*
+			 padding-left: 22px;
+			 padding-right: 22px;*/
+			 padding-left: 15px;
+			 padding-right: 15px;
+		}
+		
+		.SubNav ul li a:visited{
+			color: #303038 !important;
+			font-weight: bold;
+		}
+		
+		.SubNav ul li a:hover{
+			color: #FFF !important;
+			display: block;
+			height: 29px;
+			background-color: #303038;
+			padding-top: 10px;
+		}
+		
+		.SubNav li.active a:after,
+		.SubNav li a:hover:after {
+			content: "";
+			display: block;
+			margin: 9px auto; 
+			width: 0;
+			border: 8px solid red;
+			border-color: #303038 transparent transparent transparent;
+		}

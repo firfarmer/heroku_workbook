@@ -1,0 +1,89 @@
+<!--
+    HTML Override:  relate_header_vf
+    
+    Description:    A site is used to display most pages, however, the standard Ideas & answers pages
+                    will not inherit the site template. Instead they inherit the header & footer 
+                    defined in the customer portal settings. This page includes the site header in an iframe
+                    & a static resource which has some CSS overrides of standard SFDC styles.
+    
+    Author:         Jeremy Henson                   
+     
+    Revision Hist:  J.Henson, 11/01/2012, Initial Version
+
+-->
+
+<link rel="stylesheet" type="text/css" href="/resource/SupportSiteOverrides">
+
+<style>
+
+ /* Header iFrame */   
+ .headerFrame{
+    min-height: 200px !important;
+    padding: 0 0px;        
+    border:none !important;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    scrolling:no;  
+}
+
+
+/* Overrides for the Ideas Pages */   
+@media all{
+
+    .ideaList           {   width:10px;                 }
+    .ideaContent        {   width: 750px !important;    }
+    .ideaBody           {   width:750px;                }
+    .ideaContentWidth   {   width: 700px !important;    }    
+    .bodyDiv            {   background-color: white;    }    
+
+}
+
+/* Override to suppress the left nav & standard portal header when the user is logged in */   
+.sidebarCell {  display:none;   }
+.bPageHeader {  display:none;   }
+
+/*  Main body css   */
+body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+</style>
+<script>
+
+	redirectForPortalDefaultHome();
+
+	function redirectForPortalDefaultHome(){
+	    if(document.URL.indexOf('home.jsp') != -1){
+	        top.location.href=detectSiteURL()+"/supportsitehome";
+	    }
+  	}
+  	
+    function detectSiteURL(){
+        if(location.pathname.indexOf('/CgeSupport/') != -1){
+            return '/CgeSupport';
+        } else if(location.pathname.indexOf('/CteSupport/')  != -1){
+            return '/CteSupport';
+        } else if(location.pathname.indexOf('/CsbSupport/')  != -1){
+            return '/CsbSupport';
+        } else if(location.pathname.indexOf('/CteStandard/')  != -1){
+            return '/CteStandard';
+        } else {
+            return '/apex';
+        }    
+    }  
+
+    
+    function targetFrame(){
+        frameSrc = detectSiteURL()+'/SupportSitePortalHeader';            
+        document.getElementById('theFrame').src = frameSrc;        
+    }
+
+</script>
+    
+    <iframe class="headerFrame" scrolling="no" style="width:100%;" id="theFrame"></iframe>
+    <script> 
+        if(document.getElementById('theFrame').src == '')targetFrame();        
+    </script>
+
