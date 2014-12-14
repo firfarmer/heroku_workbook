@@ -63,13 +63,14 @@ class MyApp < Sinatra::Base
     	'Goodbye - you are now logged out'
 	end
  	get '/' do
-		logger.info "Visited home page"
-       	'Home'
-       	@accounts= client.query("select Id, Name from Account LIMIT 10")
-       	@cases= client.query("select Id, CaseNumber, Subject from Case LIMIT 100")
-       	# accounts.map(&:Name).join(',')
-       	# erb :accounts
-       	erb :cases
+       	if session['token']
+	       	@accounts= client.query("select Id, Name from Account LIMIT 10")
+	       	@cases= client.query("select Id, CaseNumber, Subject from Case LIMIT 5")
+	       	erb :cases
+	    else
+	    	erb :login 
+	    	#redirect('/authenticate')
+    	end
 	end
     get '/hello' do
        'Hello World'
