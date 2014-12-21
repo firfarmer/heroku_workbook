@@ -49,6 +49,8 @@ class MyApp < Sinatra::Base
 	  	# logger.info "#{env["omniauth.auth"]["extra"]["display_name"]} 
 	  	# authenticated"
 		# env["omniauth.auth"]["extra"]["display_name"]
+		omniauth = env["omniauth.auth"]
+	    # @user = omniauth['uid']
 		credentials = env["omniauth.auth"]["credentials"]
 	    session['token'] = credentials["token"]
 	    session['refresh_token'] = credentials["refresh_token"]
@@ -60,18 +62,27 @@ class MyApp < Sinatra::Base
 	end
 	get '/unauthenticate' do
     	session.clear
-    	'Goodbye - you are now logged out'
+    	'Goodbye - you are now logged out. <a href="/authenticate">Login</a>' 
 	end
  	get '/' do
        	if session['token']
+			# omniauth = env["omniauth.auth"]["extra"]
+	    	# @user = omniauth['first_name']
+	    	@user = 'Miles Ulrich'
 	       	@accounts= client.query("select Id, Name from Account LIMIT 10")
 	       	@cases= client.query("select Id, CaseNumber, Subject from Case LIMIT 5")
-	       	erb :cases
+	       	erb :home
 	    else
 	    	erb :login 
 	    	#redirect('/authenticate')
     	end
 	end
+
+ 	get '/cases' do
+       	@cases= client.query("select Id, CaseNumber, Subject, Status, Priority, CreatedDate, Site_URL_Acct__c, Primary_Contact__c, Last_Public_Comment_Date__c from Case LIMIT 20")
+       	erb :cases
+	end
+
     get '/hello' do
        'Hello World'
 	end

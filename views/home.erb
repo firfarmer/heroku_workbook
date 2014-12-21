@@ -1,0 +1,113 @@
+        <script>
+            $( document ).ready(function() {
+                setTopNav('Home');  // Handler for .ready() called.
+            });         
+        </script>
+                <div class="w610 mt15 mb40 ml20 mr50 fl LeftPanel">
+                    <div class="SearchBox3 pl20 pr20 mb30">
+                        <p style="margin-bottom: 4px;  margin-top: 15px;"><b>Global Search:</b> Find answers in the Knowledge Base, Cases, Solution Suggestions or Documents.</p>
+                        <input type="text" class="w450 h25 mr5" style="vertical-align: middle;" placeholder="Search Support for answers..." id="searchfield" onkeypress="return noenter(event)"/>&nbsp;
+                        <button name="Search" title="Search" class="SearchBtn" onclick="search();" type="button">Search</button>
+                    </div>
+                    
+                    <div class="SmTile w610 h200 fl grey mb20 Sborder autoHeight">
+                        <div class="bgconcurblue white xs1 pl10 pt4 h20">INFORMATION CENTER</div>
+
+                            <div id="j_id0:theTemplatePage:j_id324:j_id478" class="CaseLinks xs2 ml10 mr10 mt10 mt10">
+                                <div class="xs2 alert"><span style="font-family: tahoma,sans-serif;"><span style="font-size: 10.0pt;">In order to improve communications to users, effective 9/18/2014, the “Work Title” field will be required on the <strong>My Profile</strong> page in the Concur Support Portal.&nbsp; If the field is not completed, users will be redirected to their profile page to complete and must enter a value in order to navigate to other screens.&nbsp; This change impacts all users with access to the portal.</span></span></div>
+                                <div class="CaseLinks xs2 mt5">
+                                    <a href="https://c.cs18.visual.force.com/apex/SupportSiteServiceAlertListView"><u>See All Information Center Notices</u></a>
+                                </div>
+                            </div>
+
+                    </div>
+                    
+                    <h1>Welcome to Concur Support!</h1>
+                    <p>
+                        Concur Support is a client service and information center focused on providing client self-service tools, 
+                        timely and informative communications, as well as opportunities to interact among client peers. <br/><br/>
+                        On Concur Support, you may contact us for service, search our Knowledge Base, access resource and 
+                        training materials, participate in the Community, read about news and upcoming events, and submit 
+                        service enhancement ideas.
+                    </p>
+                    
+                    <div class="TileBox fl mb40 mb10">
+                        <a href="#">
+                            <div class="NewSmTile w190 w150 fl mr15 Dborder">
+                                <div class="mt40"><img src="images/Plus.png" alt="New Icon" /></div>
+                                <div class="m orange">Create a case</div>
+                            </div>
+                        </a>
+                        <div class="SmTile w392 w150 fl grey Sborder">
+                            <div class="bgconcurblue white xs1 pl10 pt4 h20">VIEW CASES</div>
+                                <div style="color:#303038">
+                                    <% @cases.each do |_case| %>
+                                        <a href="#"><div style="color:#303038"><%= _case.CaseNumber %> - <%= _case.Subject %></div></a>
+                                    <% end %>
+                                    <a href="cases" style="color:#303038"><u>View all cases</u></a>
+                               </div>
+                        </div>
+                    </div>
+                    <c:SupportSiteHomePageArticleComponent />
+                    <c:SupportSiteSuggestions />
+                </div>
+                
+                <div class="w300 fl">
+                    <div class="ChatBox w300 mt30 mb40" id="AdminChat">
+                        <div id="liveagent_button_online_{!liveAgentSetting.T_E_Chat_Button_Id__c}" style="display: none; border: 0px none; cursor: pointer"> 
+                            <a onclick="liveagent.startChat('{!liveAgentSetting.T_E_Chat_Button_Id__c}')" class="h5">
+                            <img src="{!URLFOR($Resource.supportsiteimages, 'images/ChatIcon.png')}" alt="Chat Icon" width="40" height="40" class="ChatLogo fl" />Chat with support</a>
+                        </div>
+                        <div id="liveagent_button_offline_{!liveAgentSetting.T_E_Chat_Button_Id__c}" style="border: 0px none;" class="xs1 ml10 mr10 mb2 cl">
+                            Chat support is currently unavailable. Chat business hours are: M-F 7am - 1pm PST. Excludes US Government Holidays. 
+                            If it is within the hours, all analysts are engaged with users at this time. Please check back in a few minutes.
+                        </div>
+                    </div>
+
+                    <div class="CommunityBox w300 h320 mt30 mb10">
+                        <div class="bgconcurblue white s1 pl10 pt4 h20">FROM THE COMMUNITY</div>
+                        <div id="j_id0:theTemplatePage:j_id324:j_id536" class="SideTile fl w300 mt10 mb10 mr10">
+                            <a href="https://cs18.salesforce.com/90660000000bmpMAAQ/d?retURL=https%3A%2F%2Fc.cs18.visual.force.com%2Fapex%2Fsupportsitehome">
+                                <div class="xs1 b ml10 mr10 mb2 cl"><u>Is anyone else experiencing application errors and the spinning wheel of death today?</u></div>
+                                <div class="xs1 ml10"></div>
+                            </a>
+                            <a href="https://cs18.salesforce.com/90660000000bmpbAAA/d?retURL=https%3A%2F%2Fc.cs18.visual.force.com%2Fapex%2Fsupportsitehome">
+                                <div class="xs1 b ml10 mr10 mb2 cl"><u>Is anyone else have issues with opening photos of hotel sites when attempting to book t...</u></div>
+                                <div class="xs1 ml10"></div>
+                            </a>
+                            <a href="https://cs18.salesforce.com/90660000000bmodAAA/d?retURL=https%3A%2F%2Fc.cs18.visual.force.com%2Fapex%2Fsupportsitehome">
+                                <div class="xs1 b ml10 mr10 mb2 cl"><u>Can an approval delegate approve reports on the mobile app?</u></div>
+                                <div class="xs1 ml10"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="AdBox mt20 mb20">
+                        <a href="https://www.concur.com/en-us/client-referral" target="_blank">
+
+                        <span id="j_id0:theTemplatePage:j_id324:j_id542:0:j_id544">
+                        <table class="htmlDetailElementTable" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr><td>
+                                <div class="sfdc_richtext" id="j_id0:theTemplatePage:j_id324:j_id542:0:j_id544j_id0:theTemplatePage:j_id324:j_id542:0:j_id544_00N60000002Xg0n_div">
+                                <img alt="User-added image" src="images/rtaImage.jpeg"></div></td></tr>
+                            </tbody>
+                        </table>
+                        <script>j_id0__theTemplatePage__j_id324__j_id542__0__j_id544 = window.onload; window.onload=function() { if (j_id0__theTemplatePage__j_id324__j_id542__0__j_id544!= null) j_id0__theTemplatePage__j_id324__j_id542__0__j_id544();};</script>
+                        </span>
+                        </a>
+                        <a href="https://www.concur.com/en-us/mobile" target="_blank">
+                            <span id="j_id0:theTemplatePage:j_id324:j_id542:1:j_id544">
+                            <table class="htmlDetailElementTable" border="0" cellpadding="0" cellspacing="0">
+                            <tbody><tr><td>
+                                <div class="sfdc_richtext" id="j_id0:theTemplatePage:j_id324:j_id542:1:j_id544j_id0:theTemplatePage:j_id324:j_id542:1:j_id544_00N60000002Xg0n_div">
+                                <img alt="User-added image" src="images/rtaImage2.jpeg">
+                                </div>
+                                </td></tr>
+                            </tbody>
+                            </table>
+                            <script>j_id0__theTemplatePage__j_id324__j_id542__1__j_id544 = window.onload; window.onload=function() { if (j_id0__theTemplatePage__j_id324__j_id542__1__j_id544!= null) j_id0__theTemplatePage__j_id324__j_id542__1__j_id544();};</script>
+                            </span>
+                            </a>
+                    </div>
+
+                </div>

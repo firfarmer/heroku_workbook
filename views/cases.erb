@@ -1,13 +1,28 @@
-<link rel="stylesheet" href="/css	/style.css">
-<table> 
- 	<tr>
-  		<th>Case Number</th>
-  		<th>Subject</th>
-	</tr>
-	<% @cases.each do |_case| %>
-	<tr> 
-		<td><%= _case.CaseNumber %></td>
-		<td><%= _case.Subject %></td>
-	</tr>
-	<% end %>
-</table>
+		<script>
+			$( document ).ready(function() {
+		  		setTopNav('Support');  // Handler for .ready() called.
+			});			
+		</script>
+		<table>
+		<tr>
+			<th>Case Number</th>
+			<th>Subject</th>
+			<th>Status</th>
+			<th>Priority</th>
+			<th>Contact Name></th>
+			<th>Site/URL/Acct.#</th>
+			<th>Date of Last Comment</th>
+		</tr>
+		<% @cases.each do |_case| %>
+			<tr>
+				<td><%= _case.CaseNumber %></td>
+				<td><%= _case.Subject %></td>
+				<td><%= _case.Status %></td>
+				<td><%= _case.Priority %></td>
+				<td><%= _case.Primary_Contact__c %></td>
+				<td><%= _case.Site_URL_Acct__c %></td>
+				<td><%= _case.Last_Public_Comment_Date__c %></td>
+			</tr>
+		<% end %>
+		</table>
+

@@ -1,4 +1,4 @@
-a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+		a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
 			border: none;
 		}
 		/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
@@ -309,7 +309,8 @@ a img { /* this selector removes the default blue border displayed in some brows
 			margin-bottom: 30px;
 			/*padding-left: 20px;*/
 			padding-left: 5px;
-			color: #303038;
+			//color: #303038;
+			color: #FFF;
 		}
 		
 		.SubNav ul{
@@ -336,7 +337,7 @@ a img { /* this selector removes the default blue border displayed in some brows
 		}
 		
 		.SubNav ul li a:link, a:visited{
-			color: #303038 !important;
+			//color: #303038 !important;
 			text-decoration: none;
 			display:block;
 		    text-align:center;
@@ -349,7 +350,7 @@ a img { /* this selector removes the default blue border displayed in some brows
 		}
 		
 		.SubNav ul li a:visited{
-			color: #303038 !important;
+			//color: #303038 !important;
 			font-weight: bold;
 		}
 		
