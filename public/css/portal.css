@@ -1,0 +1,861 @@
+/*
+ * This code is for Internal Salesforce use only, and subject to change without notice.
+ * Customers shouldn't reference this file in any web pages.
+ */
+/* BEGIN Global */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75%;
+}
+/* Override empty related list header weirdness */
+.list .headerRow .noRowsHeader {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* END Global */
+
+/* BEGIN Header */
+body .primaryPalette,
+body .primaryPalette a,
+body .bPageTitle .secondaryPalette,
+body .bPageTitle .secondaryPalette a,
+body .secondaryPalette .lbHeader,
+body .secondaryPalette .lbHeader a,
+body .pbSubheader,
+body .pbSubheader a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Default base palette color */
+.primaryPalette,
+.secondaryPalette,
+.tertiaryPalette,
+.individualPalette .primaryPalette,
+.individualPalette .secondaryPalette,
+.individualPalette .tertiaryPalette,
+.bPageBlock .pbFooter {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+/* END Header */
+
+
+/* BEGIN Portal Text Color */
+body,
+td,
+select,
+input,
+textarea,
+fieldset legend,
+.warn .textCounter,
+.miniTab .currentTab,
+.requiredLegend,
+.bPageBlock .noRecords,
+.list td,
+.list th,
+.bPageBlock td.actionColumn .actionLink,
+.bWizardBlock .pbDescription,
+.bWizardBlock .pbTopButtons {
+    color: #333333;
+}
+
+a,
+.miniTab .currentTab a {
+    color: #333333;
+}
+a:hover,
+.miniTab .currentTab a:hover {
+    color: #333333;
+}
+
+/* Override darkening in SFDC skin */
+.pbBody,
+.pbBody td,
+.lbBodyDescription,
+.list .headerRow .noRowsHeader {
+    color: #333333;
+}
+
+.pbBody a,
+.lbBody a {
+    color: #333333;
+}
+
+.pbBody a:hover,
+.lbBody a:hover {
+    color: #333333;
+}
+
+/* END Portal Text Color */
+
+
+/* BEGIN Tab Bar Navigation Styles */
+.tabNavigation {
+    background-image: url(/dimg/portalTopBg666666FFFFFF.gif);
+    background-color: #FFFFFF;
+}
+
+.tab td {
+    background-image: url(/dimg/portalTabLeftFFFFFFFFFFFF.gif);
+    border-bottom-color: #666666;
+}
+
+.tab td div,
+.tab .last div {
+    background-image: url(/dimg/portalTabRightFFFFFFFFFFFF.gif);
+}
+
+.tab .currentTab {
+    background-image: url(/dimg/portalTabLeft666666FFFFFF.gif);
+    border-right-color: #666666;
+}
+
+.tab .currentTab div {
+    background-image: url(/dimg/portalTabActiveRight666666FFFFFF.gif);
+}
+
+body .tab,
+body .tab a {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body .currentTab,
+body .currentTab a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* END Tab Bar Navigation Styles */
+
+/* BEGIN Sidebar Modules */
+.sidebarModule {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.sidebarModuleHeader,
+.nestedModule .sidebarModuleHeader {
+    background-color: #FFFFFF;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sidebarModuleHeader h1,
+.sidebarModuleHeader h2,
+.sidebarModuleHeader h3,
+.sidebarModuleHeader h4,
+.sidebarModuleHeader h5,
+.sidebarModuleHeader h6 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* END Sidebar Modules */
+
+/* BEGIN Content */
+.bodyDiv {
+    background-color: #EEEDE9;
+    border-bottom: 2px solid #666666;
+}
+
+.requiredLegend {
+    background-color: #FFFFFF;
+}
+
+.oRight .infoTable td, .oRight .infoTable th {
+    white-space: normal;
+}
+/* END Content */
+
+/* BEGIN Page Blocks */
+.bPageBlock,
+.individualPalette .bPageBlock {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.bPageBlock .pbHeader {
+    background-color: #FFFFFF;
+}
+
+.pbHeader .pbTitle h2,
+.pbHeader .pbTitle h2 a,
+.pbHeader .pbTitle h3,
+.pbHeader .pbTitle h3 a,
+.pbSubheader h3,
+.pbSubheader h3 a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bPageBlock .labelCol,
+.bPageBlock .labelCol a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bPageBlock .pbBody .pbSubsection .detailList .labelCol .noWrap{
+    white-space: nowrap;
+}
+
+/* END Page Blocks */
+
+/* BEGIN SubBlock */
+.bSubBlock {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.bSubBlock .lbHeader {
+    background-color: #FFFFFF;
+}
+/* END SubBlock */
+
+/* BEGIN Detail & Edit Pages */
+.bPageBlock .detailList tr td, .bPageBlock .detailList tr th {
+    border-bottom-color: #FFFFFF;
+}
+
+.detailPage .bPageBlock, .editPage .bPageBlock {
+    border-top-width: 1px;
+}
+
+.detailPage .bRelatedList .bPageBlock,
+.editPage .bRelatedList .bPageBlock {
+    border-top-width: 1px;
+}
+/* END Detail & Edit Pages */
+
+/* BEGIN List */
+.list .headerRow th,
+.list .headerRow th a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom-color: #A3A2A2;
+}
+
+.list td,
+.list th,
+body.oldForecast .list .last td,
+body.oldForecast .list .last th {
+    border-bottom:1px solid #A3A2A2;
+}
+
+.highlight td,
+.highlight th {
+    background-color: #EEEDE9;
+}
+
+/* END List */
+
+
+/* BEGIN Lookup */
+.lookupTab {
+    background-color: #EEEDE9;
+}
+/* END Lookup */
+
+
+/* BEGIN Calendar */
+.homeCalendarEvents .event {
+    border-top-color: #A3A2A2;
+}
+
+.mCalendar .header td {
+    color: #333333;
+    border-bottom-color: #A3A2A2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* END Calendar */
+
+/* BEGIN Report */
+
+.reportTab .csvSetup .pbSubheader,
+.reportTab .csvSetup .bPageBlock .pbSubheader,
+.reportTab .bGeneratedReport .bPageBlock .pbSubheader {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.reportTab .csvSetup,
+.reportTab .csvSetup .bPageBlock,
+.reportTab .csvSetup .bPageBlock .pbHeader,
+.reportTab .csvSetup .bPageBlock .detailList tr td,
+.reportTab .csvSetup .bPageBlock .detailList tr th {
+    background-color: #EEEDE9;
+    border: none;
+}
+
+/* END Report */
+
+/* BEGIN Color Correction */
+/*
+ * Overrides to handle non-standard color palettes
+ */
+.bMyCalendar .primaryPalette,
+.bMyCalendar .secondaryPalette,
+.bMultiuserCalendar .primaryPalette,
+.bMultiuserCalendar .secondaryPalette {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.bMyCalendar .bPageBlock,
+.bMultiuserCalendar .bPageBlock,
+.bMyDashboard .bPageBlock {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+/* END Color Correction */
+
+/* BEGIN Knowledge Article Renderers */
+
+.knowledgeTabPanel .x-tab-strip-top .x-tab-strip-active {
+	border-color: #666666;
+}
+
+.knowledgeTabPanel .x-tab-strip-top .x-tab-right {
+	background-color: #FFFFFF;
+    color: #000000;
+}
+
+.knowledgeTabPanel .x-tab-strip-top .x-tab-strip-active .x-tab-right {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+.knowledgeTabPanel .x-tab-strip-top .x-tab-strip-text {
+    color: #000000;
+}
+
+.knowledgeTabPanel .x-tab-strip .x-tab-strip-active .x-tab-right:hover{
+    color: #333333;
+}
+
+.knowledgeTOCRendererSections {
+    background-color: #FFFFFF;
+}
+
+.knowledgeTOCRendererSections .knowledgeTOCRendererSection.selected {
+    background-color: #FFFFFF;
+    color: #333333;
+    border-left: 1px solid #666666;
+    border-right: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.knowledgeTOCRendererContent .sectionName.selected td {
+    color: #333333;
+}
+
+.knowledgeTOCRendererContent .sectionName.selected {
+    background-color: #FFFFFF;
+    color: #333333;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.knowledgeTOCRendererSections .knowledgeTOCRendererSection {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.knowledgeTOCRendererContent .sectionName {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+    border-bottom: 2px solid #666666;
+}
+
+.knowledgeTOCRendererContent, .knowledgeTOCRendererContentDiv, .knowledgeTOCRendererContentDiv .sectionContent {
+    background-color: #EEEDE9;
+}
+
+.knowledgeTOCRendererContent .sectionContent {
+    background-image: none;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+}
+
+/* END Knowledge Article Renderers */
+
+/* START Answers */
+
+.ansContent a {
+	color: #333333;
+}
+
+.ansQuestionDetailsOnList .ansQuestionPrimary, .ansReplyPrimary, .ansActivityPrimary,
+	.ansBestReply .ansReplyPrimary {
+	border-color: #FFFFFF;
+}
+
+form.ansAskQuestionBox label, .ansCategoriesLabel {
+	color: #333333;
+}
+
+.ansAskQuestionContainer {
+	background: none;
+}
+
+.ansReplyListAndPostContainer {
+	background: none;
+}
+
+.ansHomeRecentlyAsked h2, .ansHomeRecentlyReplied h2, .ansHomeStillOpen h2 {
+	color: #333333;
+}
+
+/* END Answers */
+
+
+
+
+/* BEGIN Global */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75%;
+}
+/* Override empty related list header weirdness */
+.list .headerRow .noRowsHeader {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* END Global */
+
+/* BEGIN Header */
+body .primaryPalette,
+body .primaryPalette a,
+body .bPageTitle .secondaryPalette,
+body .bPageTitle .secondaryPalette a,
+body .secondaryPalette .lbHeader,
+body .secondaryPalette .lbHeader a,
+body .pbSubheader,
+body .pbSubheader a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Default base palette color */
+.primaryPalette,
+.secondaryPalette,
+.tertiaryPalette,
+.individualPalette .primaryPalette,
+.individualPalette .secondaryPalette,
+.individualPalette .tertiaryPalette,
+.bPageBlock .pbFooter {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+/* END Header */
+
+
+/* BEGIN Portal Text Color */
+body,
+td,
+select,
+input,
+textarea,
+fieldset legend,
+.warn .textCounter,
+.miniTab .currentTab,
+.requiredLegend,
+.bPageBlock .noRecords,
+.list td,
+.list th,
+.bPageBlock td.actionColumn .actionLink,
+.bWizardBlock .pbDescription,
+.bWizardBlock .pbTopButtons {
+    color: #333333;
+}
+
+a,
+.miniTab .currentTab a {
+    color: #333333;
+}
+a:hover,
+.miniTab .currentTab a:hover {
+    color: #333333;
+}
+
+/* Override darkening in SFDC skin */
+.pbBody,
+.pbBody td,
+.lbBodyDescription,
+.list .headerRow .noRowsHeader {
+    color: #333333;
+}
+
+.pbBody a,
+.lbBody a {
+    color: #333333;
+}
+
+.pbBody a:hover,
+.lbBody a:hover {
+    color: #333333;
+}
+
+/* END Portal Text Color */
+
+
+/* BEGIN Tab Bar Navigation Styles */
+.tabNavigation {
+    background-image: url(/dimg/portalTopBg666666FFFFFF.gif);
+    background-color: #FFFFFF;
+}
+
+.tab td {
+    background-image: url(/dimg/portalTabLeftFFFFFFFFFFFF.gif);
+    border-bottom-color: #666666;
+}
+
+.tab td div,
+.tab .last div {
+    background-image: url(/dimg/portalTabRightFFFFFFFFFFFF.gif);
+}
+
+.tab .currentTab {
+    background-image: url(/dimg/portalTabLeft666666FFFFFF.gif);
+    border-right-color: #666666;
+}
+
+.tab .currentTab div {
+    background-image: url(/dimg/portalTabActiveRight666666FFFFFF.gif);
+}
+
+body .tab,
+body .tab a {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body .currentTab,
+body .currentTab a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* END Tab Bar Navigation Styles */
+
+/* BEGIN Sidebar Modules */
+.sidebarModule {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.sidebarModuleHeader,
+.nestedModule .sidebarModuleHeader {
+    background-color: #FFFFFF;
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sidebarModuleHeader h1,
+.sidebarModuleHeader h2,
+.sidebarModuleHeader h3,
+.sidebarModuleHeader h4,
+.sidebarModuleHeader h5,
+.sidebarModuleHeader h6 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* END Sidebar Modules */
+
+/* BEGIN Content */
+.bodyDiv {
+    background-color: #EEEDE9;
+    border-bottom: 2px solid #666666;
+}
+
+.requiredLegend {
+    background-color: #FFFFFF;
+}
+
+.oRight .infoTable td, .oRight .infoTable th {
+    white-space: normal;
+}
+/* END Content */
+
+/* BEGIN Page Blocks */
+.bPageBlock,
+.individualPalette .bPageBlock {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.bPageBlock .pbHeader {
+    background-color: #FFFFFF;
+}
+
+.pbHeader .pbTitle h2,
+.pbHeader .pbTitle h2 a,
+.pbHeader .pbTitle h3,
+.pbHeader .pbTitle h3 a,
+.pbSubheader h3,
+.pbSubheader h3 a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bPageBlock .labelCol,
+.bPageBlock .labelCol a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bPageBlock .pbBody .pbSubsection .detailList .labelCol .noWrap{
+    white-space: nowrap;
+}
+
+/* END Page Blocks */
+
+/* BEGIN SubBlock */
+.bSubBlock {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.bSubBlock .lbHeader {
+    background-color: #FFFFFF;
+}
+/* END SubBlock */
+
+/* BEGIN Detail & Edit Pages */
+.bPageBlock .detailList tr td, .bPageBlock .detailList tr th {
+    border-bottom-color: #FFFFFF;
+}
+
+.detailPage .bPageBlock, .editPage .bPageBlock {
+    border-top-width: 1px;
+}
+
+.detailPage .bRelatedList .bPageBlock,
+.editPage .bRelatedList .bPageBlock {
+    border-top-width: 1px;
+}
+/* END Detail & Edit Pages */
+
+/* BEGIN List */
+.list .headerRow th,
+.list .headerRow th a {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom-color: #A3A2A2;
+}
+
+.list td,
+.list th,
+body.oldForecast .list .last td,
+body.oldForecast .list .last th {
+    border-bottom:1px solid #A3A2A2;
+}
+
+.highlight td,
+.highlight th {
+    background-color: #EEEDE9;
+}
+
+/* END List */
+
+
+/* BEGIN Lookup */
+.lookupTab {
+    background-color: #EEEDE9;
+}
+/* END Lookup */
+
+
+/* BEGIN Calendar */
+.homeCalendarEvents .event {
+    border-top-color: #A3A2A2;
+}
+
+.mCalendar .header td {
+    color: #333333;
+    border-bottom-color: #A3A2A2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* END Calendar */
+
+/* BEGIN Report */
+
+.reportTab .csvSetup .pbSubheader,
+.reportTab .csvSetup .bPageBlock .pbSubheader,
+.reportTab .bGeneratedReport .bPageBlock .pbSubheader {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.reportTab .csvSetup,
+.reportTab .csvSetup .bPageBlock,
+.reportTab .csvSetup .bPageBlock .pbHeader,
+.reportTab .csvSetup .bPageBlock .detailList tr td,
+.reportTab .csvSetup .bPageBlock .detailList tr th {
+    background-color: #EEEDE9;
+    border: none;
+}
+
+/* END Report */
+
+/* BEGIN Color Correction */
+/*
+ * Overrides to handle non-standard color palettes
+ */
+.bMyCalendar .primaryPalette,
+.bMyCalendar .secondaryPalette,
+.bMultiuserCalendar .primaryPalette,
+.bMultiuserCalendar .secondaryPalette {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.bMyCalendar .bPageBlock,
+.bMultiuserCalendar .bPageBlock,
+.bMyDashboard .bPageBlock {
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+/* END Color Correction */
+
+/* BEGIN Knowledge Article Renderers */
+
+.knowledgeTabPanel .x-tab-strip-top .x-tab-strip-active {
+	border-color: #666666;
+}
+
+.knowledgeTabPanel .x-tab-strip-top .x-tab-right {
+	background-color: #FFFFFF;
+    color: #000000;
+}
+
+.knowledgeTabPanel .x-tab-strip-top .x-tab-strip-active .x-tab-right {
+    background-color: #FFFFFF;
+    color: #333333;
+}
+
+.knowledgeTabPanel .x-tab-strip-top .x-tab-strip-text {
+    color: #000000;
+}
+
+.knowledgeTabPanel .x-tab-strip .x-tab-strip-active .x-tab-right:hover{
+    color: #333333;
+}
+
+.knowledgeTOCRendererSections {
+    background-color: #FFFFFF;
+}
+
+.knowledgeTOCRendererSections .knowledgeTOCRendererSection.selected {
+    background-color: #FFFFFF;
+    color: #333333;
+    border-left: 1px solid #666666;
+    border-right: 1px solid #666666;
+    border-bottom: 1px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.knowledgeTOCRendererContent .sectionName.selected td {
+    color: #333333;
+}
+
+.knowledgeTOCRendererContent .sectionName.selected {
+    background-color: #FFFFFF;
+    color: #333333;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+}
+
+.knowledgeTOCRendererSections .knowledgeTOCRendererSection {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.knowledgeTOCRendererContent .sectionName {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+    border-top: 1px solid #666666;
+    border-bottom: 2px solid #666666;
+}
+
+.knowledgeTOCRendererContent, .knowledgeTOCRendererContentDiv, .knowledgeTOCRendererContentDiv .sectionContent {
+    background-color: #EEEDE9;
+}
+
+.knowledgeTOCRendererContent .sectionContent {
+    background-image: none;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #666666;
+    border-left: 1px solid #A3A2A2;
+    border-right: 2px solid #666666;
+}
+
+/* END Knowledge Article Renderers */
+
+/* START Answers */
+
+.ansContent a {
+	color: #333333;
+}
+
+.ansQuestionDetailsOnList .ansQuestionPrimary, .ansReplyPrimary, .ansActivityPrimary,
+	.ansBestReply .ansReplyPrimary {
+	border-color: #FFFFFF;
+}
+
+form.ansAskQuestionBox label, .ansCategoriesLabel {
+	color: #333333;
+}
+
+.ansAskQuestionContainer {
+	background: none;
+}
+
+.ansReplyListAndPostContainer {
+	background: none;
+}
+
+.ansHomeRecentlyAsked h2, .ansHomeRecentlyReplied h2, .ansHomeStillOpen h2 {
+	color: #333333;
+}
+
+/* END Answers */
+
+
+

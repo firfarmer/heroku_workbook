@@ -1,0 +1,27 @@
+/***************************************************************************************************************************************
+    CSS:  			overrides.css
+    
+    Description:    The css in this file is used to override standard SFDC styles displayed on 
+    				standard pages & VF pages that use standard components
+    
+    Author:         Jeremy Henson                   
+     
+    Revision Hist:  J.Henson, 05/02/2003, Initial Version
+****************************************************************************************************************************************/
+
+.btn{ padding:7px 3px; background: #EBB142; color: #000; border: none; font-size:12px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.bPageBlock { border:solid 1px #2f2f37 !important; margin:5px 0; -webkit-border-radius: 5px !important; -moz-border-radius: 5px !important; border-radius: 5px !important;  }
+input[type="text"], textbox { border:solid 1px #2f2f37 !important; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.pbHeader table { background-color:#2f2f37; padding-top:5px; padding-bottom:5px; -moz-border-radius-topleft: 5px; border-top-left-radius: 2px; -moz-border-radius-topright: 2px; border-top-right-radius: 2px; }
+.pbHeader .pbTitle h2 { font-size:13px !important; color:#fff; }
+.message { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.pbSubsection table.detailList td.labelCol label { line-height:29px !important; }
+.knowledgeBlock span { font-size:12px !important; }
+.font12 { font-size:12px; }
+.heavy { font-weight:bold; }
+h1.pagetype { font-size:12px !important; font-size:100% !important; }
+h1, label, td.data2Col, td.labelCol, td.dataCol, h3, td { font-size:12px !important; }
+.pbTitle h3 { color:#fff !important; }
+body td { vertical-align:middle !important; }
+body .bPageBlock .pbHeader { background:none !important; }
+iframe, .bodyDiv { border: none !important; }
