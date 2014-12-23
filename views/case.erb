@@ -19,7 +19,8 @@
 <!-- Start page content table -->
 <tbody><tr><td>
 
-<div class="bPageTitle"><div class="ptBody secondaryPalette"><div class="content"><img src="/s.gif" alt="Case" class="pageTitleIcon" title="Case"><h1 class="pageType">Case<span class="titleSeparatingColon">:</span></h1><h2 class="pageDescription"> 01989055<span class="icon"></span></h2><div class="blank">&nbsp;</div></div><div class="links"><a href="javascript:printWin(%27/5006000000RMbZ1/p?retURL=%2F5006000000RMbZ1%27)" class="configLinks" title="Printable View (New Window)">Printable View</a></div></div><div class="ptBreadcrumb">&nbsp;«&nbsp;<a href="/500/o">Back to List: Cases</a></div></div>
+<div class="bPageTitle"><div class="ptBody secondaryPalette"><div class="content"><img src="/s.gif" alt="Case" class="pageTitleIcon" title="Case"><h1 class="pageType">Case<span class="titleSeparatingColon">:</span></h1><h2 class="pageDescription"> <%= @casenum %><span class="icon"></span></h2><div class="blank">&nbsp;</div></div><div class="links"><a href="javascript:printWin(%27/5006000000RMbZ1/p?retURL=%2F5006000000RMbZ1%27)" class="configLinks" title="Printable View (New Window)">Printable View</a></div></div>
+<div class="ptBreadcrumb">&nbsp;«&nbsp;<a href="cases">Back to List: Cases</a></div></div>
 
 <div class="bPageBlock brandSecondaryBrd bDetailBlock secondaryPalette" id="ep">
 <div class="pbHeader">
@@ -29,19 +30,43 @@
 <div class="pbBody"><div class="pbError" id="errorDiv_ep" style="display: none">Error: Invalid Data. <br/>Review all error messages below to correct your data.</div>
 <div class="pbSubsection">
 <table  class="detailList" border="0" cellpadding="0" cellspacing="0">
-    <tr><td class="labelCol">Contact Name</td><td class="dataCol col02">James Martin</td><td class="labelCol">Case Number</td><td class="dataCol">04959573</td></tr>
-    <tr><td class="labelCol empty">&nbsp;</td><td class="dataCol col02 empty">&nbsp;</td><td class="labelCol">Status</td><td class="dataCol">Closed – No Response</td></tr>
+    <tr><td class="labelCol">Contact Name</td><td class="dataCol col02">Miles Ulrich</td><td class="labelCol">Case Number</td><td class="dataCol"><%= @casenum %></td></tr>
+    <tr><td class="labelCol empty">&nbsp;</td><td class="dataCol col02 empty">&nbsp;</td><td class="labelCol">Status</td><td class="dataCol"><%= @case.Status %></td></tr>
     <tr><td class="labelCol empty">&nbsp;</td><td class="dataCol col02 empty">&nbsp;</td><td class="labelCol">Date/Time Opened</td><td class="dataCol">6/2/2014 11:01 AM</td></tr>
     <tr><td class="empty labelCol last">&nbsp;</td><td class="empty dataCol col02 last">&nbsp;</td><td class="last labelCol">Date/Time Closed</td><td class="last dataCol">6/15/2014 8:48 AM</td></tr>
 </table>
 </div><div class="pbSubheader brandTertiaryBrd tertiaryPalette" id="head_1_ep"><h3>Case Description<span  class="titleSeparatingColon">:</span></h3></div>
 <div class="pbSubsection">
 <table  class="detailList" border="0" cellpadding="0" cellspacing="0">
-<tr><td class="labelCol"><span class="helpButton" id="Case.00N60000002Xfyl-_help">Topic<img src="/s.gif" alt=""  class="helpOrb" title=""/><script>sfdcPage.setHelp('Case.00N60000002Xfyl', 'Select the most appropriate topic for the case.');</script></span></td><td class="dataCol col02">Analytic Reporting</td><td class="labelCol">Case Type</td><td class="dataCol">User Experience - Analytic Reporting</td></tr>
-<tr><td class="labelCol">Subject</td><td class="dataCol col02">Expense Entry Detail Report - Adding Attendees</td><td class="labelCol"><span class="helpButton" id="Case.00N60000002Xg2F-_help">Case Sub-Type<img src="/s.gif" alt=""  class="helpOrb" title=""/><script>sfdcPage.setHelp('Case.00N60000002Xg2F', 'Select the most appropriate sub-type for the case.');</script></span></td><td class="dataCol">Report Writing - Product Related</td></tr>
-<tr><td class="labelCol">Description</td><td class="dataCol col02">I would like to create an expense entry detail report in the report query studio that included all of the attendees (when applicable). I have found how to include a field that provides one attendee; however, if there a more than one attendee for that expense item, I cannot figure out how to have them all included.  It would be OK if the names were all included in one field or subsequent fields. Is this possible? Thanks.</td><td class="labelCol"><span class="helpButton" id="Case.00N60000002Xfyf-_help">Severity<img src="/s.gif" alt=""  class="helpOrb" title=""/><script>sfdcPage.setHelp('Case.00N60000002Xfyf', '1-Site Down: Production site is completely unavailable.\u003Cbr\u003E2-Major Functional Impact: Major function is experiencing abnormal behavior, with no workaround.\u003Cbr\u003E3-Some Business Impact: Features in a production site are unavailable, but workaround is available.');</script></span></td><td class="dataCol">3 – Some Business Impact</td></tr>
-<tr><td class="labelCol empty">&nbsp;</td><td class="dataCol col02 empty">&nbsp;</td><td class="labelCol">Priority</td><td class="dataCol">Priority 3</td></tr>
-<tr><td class="labelCol empty">&nbsp;</td><td class="dataCol col02 empty">&nbsp;</td><td class="labelCol">Case Region</td><td class="dataCol">North America</td></tr>
+    <tr>
+        <td class="labelCol"><span class="helpButton" id="Case.00N60000002Xfyl-_help">Topic<img src="/s.gif" alt=""  class="helpOrb" title=""/><script>sfdcPage.setHelp('Case.00N60000002Xfyl', 'Select the most appropriate topic for the case.');</script></span></td>
+        <td class="dataCol col02"><%= @case.Topic__c %></td>
+        <td class="labelCol">Case Type</td>
+        <td class="dataCol"><%= @case.Case_Type__c %></td></tr>
+    <tr>
+        <td class="labelCol">Subject</td>
+        <td class="dataCol col02"><%= @case.Subject %></td>
+        <td class="labelCol"><span class="helpButton" id="Case.00N60000002Xg2F-_help">Case Sub-Type<img src="/s.gif" alt=""  class="helpOrb" title=""/><script>sfdcPage.setHelp('Case.00N60000002Xg2F', 'Select the most appropriate sub-type for the case.');</script></span></td>
+        <td class="dataCol"><%= @case.Case_Sub_Type__c %></td>
+</tr>
+<tr>
+    <td class="labelCol">Description</td>
+    <td class="dataCol col02"><%= @case.Description %></td>
+    <td class="labelCol"><span class="helpButton" id="Case.00N60000002Xfyf-_help">Severity<img src="/s.gif" alt=""  class="helpOrb" title=""/><script>sfdcPage.setHelp('Case.00N60000002Xfyf', '1-Site Down: Production site is completely unavailable.\u003Cbr\u003E2-Major Functional Impact: Major function is experiencing abnormal behavior, with no workaround.\u003Cbr\u003E3-Some Business Impact: Features in a production site are unavailable, but workaround is available.');</script></span></td>
+    <td class="dataCol"><%= @case.Severity__c %></td>
+</tr>
+<tr>
+    <td class="labelCol empty">&nbsp;</td>
+    <td class="dataCol col02 empty">&nbsp;</td>
+    <td class="labelCol">Priority</td>
+    <td class="dataCol"><%= @case.Priority %></td>
+</tr>
+<tr>
+    <td class="labelCol empty">&nbsp;</td>
+    <td class="dataCol col02 empty">&nbsp;</td>
+    <td class="labelCol">Case Region</td>
+    <td class="dataCol"><%= @case.Account_Region__c %></td>
+</tr>
 <tr><td class="labelCol empty">&nbsp;</td><td class="dataCol col02 empty">&nbsp;</td><td class="labelCol">Site/URL/Acct. #</td><td class="dataCol">&nbsp;</td></tr>
 <tr><td class="empty labelCol last">&nbsp;</td><td class="empty dataCol col02 last">&nbsp;</td><td class="last labelCol">Call Me</td><td class="last dataCol"><img src="/img/checkbox_unchecked.gif" alt="Not Checked" width="21" height="16" class="checkImg" id="00N60000002Xfx9_chkbox" title="Not Checked" /></td></tr>
 </table></div>

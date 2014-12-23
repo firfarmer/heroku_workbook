@@ -79,12 +79,16 @@ class MyApp < Sinatra::Base
 	end
 
  	get '/cases' do
-       	@cases= client.query("select Id, CaseNumber, Subject, Status, Priority, CreatedDate, Site_URL_Acct__c, Primary_Contact__c, Last_Public_Comment_Date__c from Case LIMIT 20")
+       	@cases= client.query("select Id, CaseNumber, Subject, Status, Priority, CreatedDate, Site_URL_Acct__c, Primary_Contact__c, Last_Public_Comment_Date__c from Case Order By CreatedDate DESC LIMIT 20")
        	erb :cases
 	end
 
 	get '/case' do
-		@case= client.query("select Id, CaseNumber, Subject, Status, Priority, CreatedDate, Site_URL_Acct__c, Primary_Contact__c, Last_Public_Comment_Date__c from Case LIMIT 1")
+		@casenum = params[:id]
+		@cases= client.query("select Id, CaseNumber, Subject, Status, Priority, Severity__c, Topic__c, Description, Account_Region__c, CreatedDate, Case_Type__c, Case_Sub_Type__c, Site_URL_Acct__c, Primary_Contact__c, Last_Public_Comment_Date__c from Case WHERE CaseNumber = '"+@casenum+"' LIMIT 1")
+		if(@cases.length > 0)
+			@case= @cases.first
+		end
 		erb :case
 	end
 

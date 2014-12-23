@@ -15,7 +15,7 @@
 		</tr>
 		<% @cases.each do |_case| %>
 			<tr>
-				<td><a href="case?id=<%= _case.CaseNumber %>"><%= _case.CaseNumber %></a></td>
+				<td><a href="case?id=<%= _case.CaseNumber %>"><div style="color:#000"><%= _case.CaseNumber %></div></a></td>
 				<td><%= _case.Subject %></td>
 				<td><%= _case.Status %></td>
 				<td><%= _case.Priority %></td>
