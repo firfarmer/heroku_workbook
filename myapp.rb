@@ -83,6 +83,11 @@ class MyApp < Sinatra::Base
        	erb :cases
 	end
 
+	get '/case' do
+		@case= client.query("select Id, CaseNumber, Subject, Status, Priority, CreatedDate, Site_URL_Acct__c, Primary_Contact__c, Last_Public_Comment_Date__c from Case LIMIT 1")
+		erb :case
+	end
+
     get '/hello' do
        'Hello World'
 	end

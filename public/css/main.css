@@ -371,3 +371,12 @@
 			border: 8px solid red;
 			border-color: #303038 transparent transparent transparent;
 		}
+
+	    /* Override to suppress the left nav & standard portal header when the user is logged in */   
+	    .sidebarCell {  display:none;   }
+	    .bPageHeader {  display:none;   }
+	    .bPageBlock {
+	    	border: solid 1px #2f2f37 !important;
+	    	margin: 5px 0;
+	    	border-radius: 5px !important;
+	    }
